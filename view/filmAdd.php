@@ -1,6 +1,16 @@
-<br>
-<hr>
-<form action="index.php" method="post">
+<?php require_once('controller/filmList.php'); ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout d'un film</title>
+</head>
+<body>
+    <?php include('view/inc/nav.php'); ?> 
+    <hr>
+<form action="index.php?action=addFilm" method="post">
     <p>
         <label for="title">Titre du Film</label>
         <input type="text" name="title" />
@@ -19,6 +29,12 @@
 </form>
 
 <hr>
+       
+</body>
+</html>
+
+
+
 <?php
 if (!empty($_POST['title'])) {
     $film = new Film();
