@@ -6,16 +6,7 @@ require_once('view/filmAdd.php');
 require_once('view/acteurAdd.php');
 
 
-if (!empty($_POST['title'])) {
-    $film = new Film();
-    $film->createMovie($_POST['title'], $_POST['startYear'], $_POST['runtimeMinutes']);
-    var_dump($film);
-}
-if (!empty($_POST['firstname']) & !empty($_POST['lastname']) & !empty($_POST['dateOfBirth'])) {
-    $acteur = new Acteur();
-    $acteur->createActeur($_POST['firstname'], $_POST['lastname'], $_POST['dateOfBirth']);
-    var_dump($acteur);
-}
+
 ?>
 
 

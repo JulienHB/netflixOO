@@ -19,3 +19,10 @@
 </form>
 <br>
 <hr>
+<?php
+
+if (!empty($_POST['firstname']) & !empty($_POST['lastname']) & !empty($_POST['dateOfBirth'])) {
+    $acteur = new Acteur();
+    $acteur->createActeur($_POST['firstname'], $_POST['lastname'], $_POST['dateOfBirth']);
+    var_dump($acteur);
+}

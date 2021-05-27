@@ -19,3 +19,9 @@
 </form>
 
 <hr>
+<?php
+if (!empty($_POST['title'])) {
+    $film = new Film();
+    $film->createMovie($_POST['title'], $_POST['startYear'], $_POST['runtimeMinutes']);
+    var_dump($film);
+}
