@@ -1,5 +1,5 @@
 
-<?php require_once('controller/filmList.php'); ?>
+<?php require_once('controller/acteurList.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +9,10 @@
     <title>Liste de acteurs</title>
 </head>
 <body>
-    <?php include('view/inc/nav.php'); ?>   
-    <h1>Liste de acteurs</h1>
+    <?php include('view/inc/nav.php'); ?>
+    
+   
+   
+   
 </body>
 </html>

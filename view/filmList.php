@@ -11,9 +11,9 @@
     <?php include('view/inc/nav.php'); ?>
     <h1>Liste de films</h1>
     <div>
-        <h2><?php $oFilm->displayTitle(); ?></h2>
-        <p>Année <?php  $oFilm->displayStartYear(); ?></p>
-        <p>Durée <?php $oFilm->displayRuntimeMinutes(); ?></p>
+        <h2><?php ; ?></h2>
+        <p>Année <?php  ; ?></p>
+        <p>Durée <?php ; ?></p>
     </div>
 </body>
 </html>

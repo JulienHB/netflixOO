@@ -24,11 +24,22 @@
         <input type="text" name="runtimeMinutes" />
     </p>
     <p>
-        <input type="submit" name="creationFilm" value="Créer la ref !" />
+        <input type="submit" name="creationFilm" value="Créer le film" />
     </p>
 </form>
 
 <hr>
+
+<?php if (!empty($_POST)){?>
+    <h1><?php echo $_POST['title']?></h1>
+    
+    <p>L'année de sortie est : <?php echo $_POST['startYear']; ?></p>
+    
+    <p><?php $film->showDuration();?></p>
+    
+    <?php
+}
+?>
        
 </body>
 </html>
@@ -36,8 +47,5 @@
 
 
 <?php
-if (!empty($_POST['title'])) {
-    $film = new Film();
-    $film->createMovie($_POST['title'], $_POST['startYear'], $_POST['runtimeMinutes']);
-    var_dump($film);
-}
+
+

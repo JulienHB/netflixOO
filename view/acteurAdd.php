@@ -1,4 +1,4 @@
-<?php require_once('controller/filmList.php'); ?>
+<?php require_once('controller/acteurList.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,8 +21,12 @@
         <input type="text" name="lastname" />
     </p>
     <p>
-        <label for="dateOfBirth">Année de naissance</label>
-        <input type="text" name="dateOfBirth" />
+        <label for="dateOfBirth">Date de naissance</label>
+        <input type="date" name="dateOfBirth" />
+    </p>
+    <p>
+        <label for="dateOfDeath">Date de décés</label>
+        <input type="date" name="dateOfDeath" />
     </p>
     <p>
         <input type="submit" name="creationActeur" value="Créer un acteur" />
@@ -30,18 +34,15 @@
 </form>
 <br>
 <hr>
-
-
+<?php if (!empty($_POST)){?>
+    <h1><?php echo $_POST['firstname']?> <?php echo $_POST['lastname']?></h1>
+    
+    <p><?php $acteur->isDeath(); ?></p><?php
+}
+?>
     
 </body>
 </html>
 
 
 
-
-<?php
-if (!empty($_POST['firstname']) & !empty($_POST['lastname']) & !empty($_POST['dateOfBirth'])) {
-    $acteur = new Acteur();
-    $acteur->createActeur($_POST['firstname'], $_POST['lastname'], $_POST['dateOfBirth']);
-    var_dump($acteur);
-}?>

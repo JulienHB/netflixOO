@@ -7,6 +7,19 @@ class Film
     private $runtimeMinutes;
 
     //Methodes
+    /**
+     * @param string $title
+     * @param int $startYear
+     * @param int $runtimeMinutes
+     */
+    public function __construct(string $title,int $startYear,int $runtimeMinutes)
+    {
+        $this->title = $title;
+        $this->startYear = $startYear;
+        $this->runtimeMinutes = $runtimeMinutes;
+     }
+
+
     public function showTitle()
     {
         echo $this->title;
@@ -24,11 +37,5 @@ class Film
         } else {
             echo ("Ce film dure $hours h et $minutes min");
         }
-    }
-    public function createMovie($title, $startYear, $runtimeMinutes)
-    {
-        $this->title = $title;
-        $this->startYear = $startYear;
-        $this->runtimeMinutes = $runtimeMinutes;
     }
 }
