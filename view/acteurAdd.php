@@ -1,4 +1,7 @@
-<?php require_once('controller/acteurList.php'); ?>
+<?php 
+require_once('controller/acteurList.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,8 +38,7 @@
 <br>
 <hr>
 <?php if (!empty($_POST)){?>
-    <h1><?php echo $_POST['firstname']?> <?php echo $_POST['lastname']?></h1>
-    
+    <h1><?php echo $_POST['firstname']?> <?php echo $_POST['lastname']?></h1>  
     <p><?php $acteur->isDeath(); ?></p><?php
 }
 ?>

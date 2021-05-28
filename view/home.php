@@ -1,4 +1,3 @@
-<?php require_once('controller/filmList.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

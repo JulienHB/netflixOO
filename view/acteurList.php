@@ -1,5 +1,7 @@
-
-<?php require_once('controller/acteurList.php'); ?>
+<?php 
+require_once('controller/acteurList.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,9 +12,8 @@
 </head>
 <body>
     <?php include('view/inc/nav.php'); ?>
-    
-   
-   
+    <?php var_dump($_SESSION['acteurs']);?>
+ 
    
 </body>
 </html>

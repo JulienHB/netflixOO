@@ -1,4 +1,7 @@
-<?php require_once('controller/filmList.php'); ?>
+<?php
+require_once('controller/filmList.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
